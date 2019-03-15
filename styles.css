@@ -20,13 +20,19 @@ img{
     display: inline-block;
     margin-left: 50px;
 }
-#name, #blog, #num-repos{
+#name, #blog{
+    border: 2px;
+    border-style: solid;
+    border-color: blueviolet;
+    border-bottom: none;
+}
+#num-repos{
     border: 2px;
     border-style: solid;
     border-color: blueviolet;
 }
 p{
-    font-size: 20px;
+    margin: auto;
 }
 h1{
     margin: 10px;
@@ -36,5 +42,11 @@ table {
     margin: 10px;
 }
 table, th, td {
-    border: 2px dotted blueviolet;
+    border: 1px solid blueviolet;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
 }

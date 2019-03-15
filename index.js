@@ -1,8 +1,8 @@
 $.ajax("https://api.github.com/users/matilfor").done(function(data){
     $("#img").append('<img src="' + data.avatar_url + '" />');    
-    $("#name").append(data.name);
-    $("#blog").append(data.blog);
-    $("#num-repos").append(data.public_repos);
+    $("#name").append('<p>Name: ' + data.name + '</p>');
+    $("#blog").append("<p>LinkedIn: <a href='https://www.linkedin.com/in/matilde-fortunato/' class='users'>" + data.blog + "</a></p>");
+    $("#num-repos").append("<p>Repositories: " + data.public_repos + "</p");
 });
 
 $.ajax("https://api.github.com/users/matilfor/repos").done(function(data){
@@ -11,7 +11,7 @@ $.ajax("https://api.github.com/users/matilfor/repos").done(function(data){
         var row = $('<tr class="row"></tr>');
         var dataName = "<td>"+ data[i].name +"</td>"
         var dataDesc = "<td>"+ data[i].description +"</td>"
-        var dataUrl = "<td>"+ data[i].url +"</td>"
+        var dataUrl = '<td><a href=" ' + data[i].url + ' ">' + "<p>View</p>" + '</td>'
         row.append(dataName);
         row.append(dataDesc);
         row.append(dataUrl)
