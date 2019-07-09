@@ -8,10 +8,10 @@ $.ajax("https://api.github.com/users/matilfor").done(function(data){
 $.ajax("https://api.github.com/users/matilfor/repos").done(function(data){
     var repoTable = $("#repos");
     for(let i=0; i < data.length; i++){
-        var row = $('<tr class="row"></tr>');
+        var row = $('<tr></tr>');
         var dataName = "<td>"+ data[i].name +"</td>"
         var dataDesc = "<td>"+ data[i].description +"</td>"
-        var dataUrl = '<td><a href=" ' + data[i].url + ' ">' + "<p>View</p>" + '</td>'
+        var dataUrl = '<td><a href=" ' + data[i].svn_url + ' ">' + "<p>View</p>" + '</td>'
         row.append(dataName);
         row.append(dataDesc);
         row.append(dataUrl)
