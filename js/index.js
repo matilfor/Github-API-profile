@@ -1,8 +1,8 @@
 $.ajax("https://api.github.com/users/matilfor").done(function(data){
-    $("#img").append('<img src="' + data.avatar_url + '" />');    
-    $("#name").append('<p>Name: ' + data.name + '</p>');
-    $("#blog").append("<p>LinkedIn: <a href='https://www.linkedin.com/in/matilde-fortunato/' class='users'>" + data.blog + "</a></p>");
-    $("#num-repos").append("<p>Repositories: " + data.public_repos + "</p");
+    $("#img").append('<img class="img-thumbnail" src="' + data.avatar_url + '" />');    
+    $("#name").append('<p>' + data.name + '</p>');
+    $("#blog").append("<a href='https://www.linkedin.com/in/matilde-fortunato/' class='users'>" + data.blog + "</a>");
+    $("#num-repos").append("<p>" + data.public_repos + "</p");
 });
 
 $.ajax("https://api.github.com/users/matilfor/repos").done(function(data){

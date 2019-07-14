@@ -9,18 +9,18 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4" id="img"></div>
-      <div class="col-md-8" id="info">
-        <p id="name"></p>
-        <p id="blog"></p>
-        <p id="num-repos"></p>
+  <div class="container">
+    <div class="row align-items-center" style="margin-left: 10px">
+      <div class="col-sm-8" id="info">
+        <div id="name"><p style="font-weight: bold">Name:</p></div>
+        <div id="blog"><p style="font-weight: bold">LinkedIn:</p></div>
+        <div id="num-repos"><p style="font-weight: bold">Number of repos:</p></div>
       </div>
+      <div class="col-sm-4" id="img"></div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12">
+  <div class="container">
+    <div class="col-sm-12">
       <h1 class="repos-title">Repositories</h1>
       <table class="table table-hover table-sm" id="repos">
         <thead>
